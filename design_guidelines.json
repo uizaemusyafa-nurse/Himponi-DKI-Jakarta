@@ -1,0 +1,104 @@
+{
+  "project_name": "HIMPONI Member Database Application",
+  "theme": "light",
+  "archetype": "1 - Organic & Earthy (Adapted to Professional Teal/White Healthcare)",
+  "design_philosophy": "A clean, trustworthy, and functional medical interface. The design uses generous spacing, soft borders, and a crisp teal-and-white palette to reduce cognitive load during long form entries and data analysis. We prioritize emotional approachability without sacrificing data density in the admin dashboard.",
+  "colors": {
+    "background": "#F8FAFC",
+    "surface": "#FFFFFF",
+    "primary": "#0F766E",
+    "primary_hover": "#115E59",
+    "secondary": "#E0F2FE",
+    "accent": "#0ea5e9",
+    "text_primary": "#0F172A",
+    "text_secondary": "#475569",
+    "border": "#E2E8F0",
+    "success": "#10B981",
+    "warning": "#F59E0B",
+    "error": "#EF4444"
+  },
+  "typography": {
+    "headings": "Manrope",
+    "body": "Work Sans",
+    "rules": {
+      "h1": "text-4xl tracking-tight font-bold text-slate-900",
+      "h2": "text-2xl tracking-tight font-semibold text-slate-800",
+      "h3": "text-lg font-semibold text-slate-800",
+      "body": "text-base text-slate-600 leading-relaxed",
+      "labels": "text-sm font-medium text-slate-700 tracking-wide uppercase",
+      "small": "text-xs text-slate-500"
+    }
+  },
+  "spacing_and_layout": {
+    "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+    "section_gap": "gap-8 md:gap-12",
+    "card_padding": "p-6 sm:p-8",
+    "form_spacing": "space-y-6",
+    "border_radius": "rounded-xl",
+    "shadows": {
+      "card": "shadow-sm shadow-slate-200/50",
+      "dropdown": "shadow-lg shadow-slate-200/50",
+      "floating": "shadow-[0_8px_30px_rgb(0,0,0,0.04)]"
+    }
+  },
+  "components": {
+    "button": "rounded-lg font-medium transition-all duration-200 focus:ring-2 focus:ring-offset-2",
+    "button_primary": "bg-[#0F766E] text-white hover:bg-[#115E59] focus:ring-[#0F766E]",
+    "button_secondary": "bg-white text-slate-700 border border-slate-200 hover:bg-slate-50",
+    "input": "w-full rounded-lg border-slate-200 bg-white px-4 py-2.5 text-sm text-slate-900 focus:border-[#0F766E] focus:ring-1 focus:ring-[#0F766E]",
+    "card": "bg-white border border-slate-200/60 rounded-xl shadow-sm",
+    "table": "w-full text-left text-sm",
+    "table_header": "bg-slate-50 text-slate-600 font-medium py-3 px-4 uppercase tracking-wider text-xs",
+    "table_row": "border-b border-slate-100 hover:bg-slate-50/50 transition-colors",
+    "badge": "inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-teal-50 text-teal-700"
+  },
+  "pages": {
+    "public_registration_form": {
+      "layout": "Centered constrained column (max-w-3xl) with sticky progress indicator.",
+      "header": "Brand logo (HIMPONI), title 'Pendaftaran Anggota HIMPONI DKI Jakarta', and a subtle abstract teal texture background in the hero.",
+      "sections": [
+        "Data Pribadi: Full name, DOB, Gender, Contact info.",
+        "Pendidikan: Degree/Institution.",
+        "Tempat Kerja: Hospital/Clinic name, address.",
+        "Area Kerja: Radio buttons (Kemoterapi, Radioterapi, Lainnya).",
+        "Sertifikasi/Pelatihan: Checkboxes (Kanker Dasar, Kemoterapi, Paliatif, Radioterapi, Bedah, Napak) + Dynamic field 'Add Custom Certificate' (up to 10).",
+        "Keanggotaan Organisasi: Radio 'Anggota Himponi (Ya/Tidak)'. If 'Ya', show input for 'Nomor Anggota (NIRA)'."
+      ],
+      "ux_notes": "Use 'bento-style' visually separated cards for each section. Generous padding inside cards (p-8). Clear labels in Bahasa Indonesia."
+    },
+    "admin_login": {
+      "layout": "Split screen or centered card. Left/Background: Modern hospital interior image. Right/Center: Login form.",
+      "ux_notes": "Clean, distraction-free. Only email/password and 'Masuk' button."
+    },
+    "admin_dashboard": {
+      "layout": "Side navigation or Top navigation (Admin, Logout) + Main content area. Background #F8FAFC.",
+      "header": "Summary metrics (Total Members, Top Area Kerja, New Registrations).",
+      "main_content": [
+        "Filters & Actions Row: Search bar (Name/Hospital/NIRA), Dropdown filter (Area Kerja), Dropdown filter (Region), Export to Excel/CSV button.",
+        "Data Visualization: A Recharts Bar or Pie chart showing 'Distribution of members by Area Kerja' placed in a clean card layout.",
+        "Data Table: Members list with pagination. Columns: Nama, Instansi, NIRA, Area Kerja, Status."
+      ]
+    }
+  },
+  "media": {
+    "icons_library": "lucide-react",
+    "images": {
+      "hospital_interior": {
+        "url": "https://images.unsplash.com/photo-1777269749032-d8d458ae594d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODB8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBob3NwaXRhbCUyMGludGVyaW9yJTIwY2xlYW58ZW58MHx8fHwxNzgyMjc2NDk0fDA&ixlib=rb-4.1.0&q=85",
+        "description": "Empty clean hospital corridor, used for admin login background or hero backdrop."
+      },
+      "nurse_portrait": {
+        "url": "https://images.pexels.com/photos/4270366/pexels-photo-4270366.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Professional nurse, can be used in marketing/registration success states."
+      },
+      "abstract_teal_texture": {
+        "url": "https://images.unsplash.com/photo-1651488829517-95af02975dd5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzN8MHwxfHNlYXJjaHwyfHxhYnN0cmFjdCUyMGNsZWFuJTIwdGVhbCUyMHRleHR1cmV8ZW58MHx8fHwxNzgyMjc2NDk0fDA&ixlib=rb-4.1.0&q=85",
+        "description": "Abstract clean teal background texture, excellent for the top banner of the registration form."
+      }
+    }
+  },
+  "accessibility_and_testing": {
+    "testing_attributes": "All interactive elements MUST include data-testid. Examples: data-testid='reg-form-submit', data-testid='admin-export-btn', data-testid='filter-area-kerja'.",
+    "contrast": "Ensure white text on primary Teal #0F766E meets WCAG AA standards. Hover states must be explicitly defined."
+  }
+}
