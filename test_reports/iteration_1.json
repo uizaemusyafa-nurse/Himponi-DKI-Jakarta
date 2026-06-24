@@ -1,0 +1,35 @@
+{
+  "summary": "First QA pass for HIMPONI DKI Jakarta Member DB. Backend auth, member CRUD, validations, stats and CSV/XLSX export all verified. Frontend public registration form (incl. Lainnya conditional, custom certs, anggota Ya conditional) submits successfully showing 'Terima Kasih!'. Admin login (invalid + valid), admin dashboard with stat cards, bar+pie charts, search, member row, and detail dialog all working.",
+  "tested_scope": ["backend", "frontend", "auth", "integration"],
+  "passed": [
+    "POST /api/auth/login returns 200 with token + user payload (admin@himponi-dki.org)",
+    "GET /api/auth/me without token -> 401",
+    "GET /api/auth/me with Bearer token -> 200 with admin profile",
+    "POST /api/members with full valid payload -> 201 {id, message: 'Pendaftaran berhasil disimpan'}",
+    "POST /api/members area_kerja='Lainnya' without area_kerja_lainnya -> 400 'Mohon isi keterangan Area Kerja Lainnya'",
+    "POST /api/members anggota_himponi='Ya' without nomor_anggota_himponi -> 400 'Nomor Anggota Himponi wajib diisi jika memilih Ya'",
+    "POST /api/members with 11 custom_certificates -> 400 'Maksimal 10 sertifikat tambahan'",
+    "GET /api/members?q=&area= returns items list with filtering",
+    "GET /api/members/stats returns total, new_last_7_days, by_area_kerja, top_regions, by_pendidikan",
+    "GET /api/members/export?format=csv -> 200, content-type text/csv; charset=utf-8",
+    "GET /api/members/export?format=xlsx -> 200, content-type application/vnd.openxmlformats-officedocument.spreadsheetml.sheet (5388 bytes)",
+    "Public registration form loads at /, all fields fillable incl. Radix Select (jenis kelamin, pendidikan)",
+    "Area Kerja 'Lainnya' radio reveals input-area-lainnya",
+    "Anggota Himponi 'Ya' radio reveals input-nomor-anggota",
+    "btn-add-cert adds custom certificate row (input-cert-nama-0, input-cert-tahun-0)",
+    "Form submission shows 'Terima Kasih!' success screen",
+    "Admin login invalid creds shows error (401 in console + toast)",
+    "Admin login valid creds redirects to /admin",
+    "Admin dashboard renders stat cards, bar chart, pie chart, members table",
+    "Search by 'UI Test' filters to 1 matching member row",
+    "Clicking Detail (view-btn) opens detail-dialog"
+  ],
+  "failed": [],
+  "action_items": [
+    "NOTE for main agent: review_request listed payload field names as nira/alamat/kota/tempat_kerja, but actual backend schema uses nira_ppni/alamat_lengkap/kabupaten_kota/tempat_bekerja. The frontend already uses the correct backend names, so this is only a documentation mismatch in the review request - no code fix needed. Verified end-to-end working with the correct field names."
+  ],
+  "success_rate": {"backend": "100%", "frontend": "100%"},
+  "retest_needed": false,
+  "full_testing_deferred": true,
+  "test_credentials": "Loaded from /app/memory/test_credentials.md - admin@himponi-dki.org / HimponiAdmin2026"
+}
