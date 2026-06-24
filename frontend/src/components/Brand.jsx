@@ -1,22 +1,36 @@
-import { HeartPulse } from "lucide-react";
+const LOGO_URL =
+  "https://customer-assets.emergentagent.com/job_onco-nurses-dki/artifacts/oeon7zuo_logo%20himponi.png";
 
-export const Brand = ({ size = "default" }) => {
+export const Brand = ({ size = "default", variant = "default" }) => {
   const isLarge = size === "large";
+  const onDark = variant === "onDark";
   return (
     <div className="flex items-center gap-3" data-testid="himponi-brand">
       <div
         className={`${
-          isLarge ? "h-12 w-12" : "h-10 w-10"
-        } rounded-xl teal-gradient flex items-center justify-center text-white shadow-md`}
+          isLarge ? "h-14 w-14" : "h-11 w-11"
+        } rounded-2xl bg-white border border-pink-100 shadow-sm flex items-center justify-center overflow-hidden p-1`}
       >
-        <HeartPulse className={isLarge ? "h-6 w-6" : "h-5 w-5"} />
+        <img
+          src={LOGO_URL}
+          alt="IONA - Indonesian Oncology Nurses Association"
+          className="h-full w-full object-contain"
+        />
       </div>
       <div className="leading-tight">
-        <div className={`font-display font-bold ${isLarge ? "text-xl" : "text-base"} text-slate-900`}>
+        <div
+          className={`font-display font-bold ${isLarge ? "text-xl" : "text-base"} ${
+            onDark ? "text-white" : "text-fuchsia-900"
+          }`}
+        >
           HIMPONI
         </div>
-        <div className={`${isLarge ? "text-xs" : "text-[10px]"} uppercase tracking-wider text-teal-700`}>
-          DKI Jakarta
+        <div
+          className={`${isLarge ? "text-[11px]" : "text-[10px]"} uppercase tracking-[0.18em] ${
+            onDark ? "text-pink-100" : "text-fuchsia-700"
+          }`}
+        >
+          DKI Jakarta · IONA
         </div>
       </div>
     </div>

@@ -207,7 +207,7 @@ export default function RegistrationForm() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 flex items-center justify-between gap-6 flex-wrap">
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <Brand size="large" />
+              <Brand size="large" variant="onDark" />
             </div>
             <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
               Pendaftaran Anggota

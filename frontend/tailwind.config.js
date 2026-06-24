@@ -15,6 +15,23 @@ module.exports = {
       colors: {
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
+        teal: {
+          50: '#FDF4FA',
+          100: '#FBE5F2',
+          200: '#F7CBE5',
+          300: '#F39AC9',
+          400: '#EA5BA8',
+          500: '#E91E8C',
+          600: '#C81C7A',
+          700: '#A6258C',
+          800: '#7A1968',
+          900: '#5E1450'
+        },
+        brandgold: {
+          400: '#F0C53B',
+          500: '#E5B009',
+          600: '#C99A00'
+        },
         card: {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))'

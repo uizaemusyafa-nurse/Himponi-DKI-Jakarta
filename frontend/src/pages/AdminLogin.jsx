@@ -38,7 +38,7 @@ export default function AdminLogin() {
       <div className="hidden lg:flex teal-gradient text-white p-12 flex-col justify-between relative overflow-hidden">
         <div className="hero-pattern absolute inset-0 opacity-30" />
         <div className="relative">
-          <Brand size="large" />
+          <Brand size="large" variant="onDark" />
         </div>
         <div className="relative">
           <h2 className="font-display text-4xl font-bold leading-tight">

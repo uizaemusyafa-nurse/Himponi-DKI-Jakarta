@@ -55,7 +55,7 @@ import {
   FileText,
 } from "lucide-react";
 
-const AREA_COLORS = ["#0F766E", "#0ea5e9", "#f59e0b", "#10b981", "#8b5cf6", "#ef4444"];
+const AREA_COLORS = ["#A6258C", "#E91E8C", "#E5B009", "#7A1968", "#F39AC9", "#C99A00"];
 
 const StatCard = ({ icon: Icon, label, value, accent = "teal" }) => (
   <Card className="p-6 card-soft border-slate-200/60 rounded-2xl bg-white">
@@ -235,7 +235,7 @@ export default function AdminDashboard() {
                   <XAxis dataKey="name" tick={{ fontSize: 12, fill: "#475569" }} />
                   <YAxis tick={{ fontSize: 12, fill: "#475569" }} allowDecimals={false} />
                   <Tooltip />
-                  <Bar dataKey="value" fill="#0F766E" radius={[8, 8, 0, 0]} />
+                  <Bar dataKey="value" fill="#A6258C" radius={[8, 8, 0, 0]} />
                 </BarChart>
               </ResponsiveContainer>
             </div>

@@ -9,7 +9,7 @@ body {
     font-family: 'Work Sans', system-ui, -apple-system, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #F8FAFC;
+    background-color: #FDF7FB;
     color: #0F172A;
 }
 
@@ -20,30 +20,30 @@ h1, h2, h3, h4, h5, h6, .font-display {
 
 @layer base {
     :root {
-        --background: 210 40% 98%;
-        --foreground: 222 47% 11%;
+        --background: 322 60% 98%;
+        --foreground: 322 30% 12%;
         --card: 0 0% 100%;
-        --card-foreground: 222 47% 11%;
+        --card-foreground: 322 30% 12%;
         --popover: 0 0% 100%;
-        --popover-foreground: 222 47% 11%;
-        --primary: 174 77% 26%;
+        --popover-foreground: 322 30% 12%;
+        --primary: 320 64% 40%;
         --primary-foreground: 0 0% 100%;
-        --secondary: 199 95% 94%;
-        --secondary-foreground: 174 77% 20%;
-        --muted: 210 40% 96%;
-        --muted-foreground: 215 16% 47%;
-        --accent: 199 89% 48%;
+        --secondary: 322 70% 95%;
+        --secondary-foreground: 320 64% 30%;
+        --muted: 322 30% 96%;
+        --muted-foreground: 322 10% 45%;
+        --accent: 330 80% 52%;
         --accent-foreground: 0 0% 100%;
         --destructive: 0 84% 60%;
         --destructive-foreground: 0 0% 100%;
-        --border: 214 32% 91%;
-        --input: 214 32% 91%;
-        --ring: 174 77% 26%;
-        --chart-1: 174 77% 26%;
-        --chart-2: 199 89% 48%;
-        --chart-3: 160 84% 39%;
-        --chart-4: 43 96% 56%;
-        --chart-5: 280 65% 60%;
+        --border: 322 30% 90%;
+        --input: 322 30% 90%;
+        --ring: 320 64% 40%;
+        --chart-1: 320 64% 40%;
+        --chart-2: 330 80% 52%;
+        --chart-3: 45 92% 47%;
+        --chart-4: 280 50% 50%;
+        --chart-5: 200 80% 50%;
         --radius: 0.75rem;
     }
 }
@@ -58,15 +58,15 @@ h1, h2, h3, h4, h5, h6, .font-display {
 }
 
 .teal-gradient {
-    background: linear-gradient(135deg, #0F766E 0%, #115E59 60%, #134e4a 100%);
+    background: linear-gradient(135deg, #A6258C 0%, #C81C7A 55%, #E91E8C 100%);
 }
 
 .hero-pattern {
     background-image:
-        radial-gradient(circle at 1px 1px, rgba(15, 118, 110, 0.15) 1px, transparent 0);
+        radial-gradient(circle at 1px 1px, rgba(166, 37, 140, 0.15) 1px, transparent 0);
     background-size: 24px 24px;
 }
 
 .card-soft {
-    box-shadow: 0 1px 2px 0 rgba(15, 23, 42, 0.04), 0 8px 24px -8px rgba(15, 118, 110, 0.08);
+    box-shadow: 0 1px 2px 0 rgba(15, 23, 42, 0.04), 0 8px 24px -8px rgba(166, 37, 140, 0.10);
 }
